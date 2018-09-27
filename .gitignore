@@ -1,4 +1,6 @@
 
+html/
+
 *.asv
 *.m~
 .DS_Store
