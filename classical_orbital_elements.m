@@ -23,16 +23,33 @@ a = mu/((2*mu/r_n)-v_n^2);
 
 e_vector = (v_n^2/mu - 1/r_n).*r - dot(r,v).*v/mu;
 % e_pn = sqrt(1-(p/a));
+disp(e_vector)
 e = norm(e_vector);
 
 n = cross(Khat,Hm);
 n_n = norm(n);
 
 i = acosd(dot(Khat,Hm)/Hm_n);
+if i>180 % check that i < 180
+    i = 360-i;
+end
+    
 Omega = acosd(dot(Ihat,n)/n_n);
+if ((n(2)>0 && Omega>180)||(n(2)<0 && Omega<180)) % check that Omega < 180 if n_j is positive
+    Omega = 360-Omega;
+end
+    
 omega = acosd(dot(n,e_vector)/(n_n*e));
+if ((e_vector(3)>0 && omega>180)||(e_vector(3)<0 && omega<180)) % check that omega < 180 if e_k is positive
+    omega = 360-omega;
+end
 
 nu = acosd(dot(e_vector,r)/(e*r_n));
+if (dot(r,v)>0 && nu>180)||(dot(r,v)<0 && nu<180)
+% check that if r.v > 0, the s/c is going from periapsis to apoapsis.
+    nu = 360 - nu;
+end
+    
 
 end
 
