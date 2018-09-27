@@ -8,7 +8,7 @@ function [x,y,z] = orbital_elem2geo_eq(p,e,i,omega,Omega)
 if e<1 && e>=0
     nu = (0:0.001:2*pi)';
 elseif e>=1
-    nu = (-1*pi/2:.01:pi/2)';
+    nu = (-.66*pi:.01:.66*pi)';
 end
 
 r = p./(1+e*cos(nu));

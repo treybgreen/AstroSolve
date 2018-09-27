@@ -6,13 +6,13 @@ mu = 398601.2;
 
 [p,a,e,i,omega,Omega,nu0] = classical_orbital_elements(r0,v0,mu);
 
-fprintf('Semi-Latus Rectum (p):\t\t%f\n',p);
-fprintf('Semi-Major Axis (a):\t\t%f\n',a);
+fprintf('Semi-Latus Rectum (p):\t\t%f km\n',p);
+fprintf('Semi-Major Axis (a):\t\t%f km\n',a);
 fprintf('Eccentricity (e):\t\t%f\n',e);
-fprintf('Inclination Angle (i):\t\t%f\n',i);
-fprintf('Ascending Node (Omega):\t\t%f\n',Omega);
-fprintf('Argument of Periapsis (omega):\t%f\n',omega);
-fprintf('True Anomoly Angle (nu_0):\t%f\n',nu0);
+fprintf('Inclination Angle (i):\t\t%f degrees\n',i);
+fprintf('Ascending Node (Omega):\t\t%f degrees\n',Omega);
+fprintf('Argument of Periapsis (omega):\t%f degrees\n',omega);
+fprintf('True Anomoly Angle (nu_0):\t%f degrees\n',nu0);
 
 [x,y,z] = orbital_elem2geo_eq(p,e,i,omega,Omega);
 

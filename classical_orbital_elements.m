@@ -23,7 +23,6 @@ a = mu/((2*mu/r_n)-v_n^2);
 
 e_vector = (v_n^2/mu - 1/r_n).*r - dot(r,v).*v/mu;
 % e_pn = sqrt(1-(p/a));
-disp(e_vector)
 e = norm(e_vector);
 
 n = cross(Khat,Hm);
