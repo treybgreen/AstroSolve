@@ -12,6 +12,6 @@ cla
 surf(XX,YY,ZZ)
 axis equal
 hold on
-plot3(x,y,z)
+plot3(x,y,z,'LineWidth',2)
 hold off
 end
