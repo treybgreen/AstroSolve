@@ -6,6 +6,7 @@ function [p,a,e,i,omega,Omega,nu] = classical_orbital_elements(r,v,mu)
 %   node (Omega), and the true anomoly angle (nu)
 
 v = format_vector(v);
+r = format_vector(r);
 
 r_n = norm(r);
 v_n = norm(v);

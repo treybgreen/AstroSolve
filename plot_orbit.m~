@@ -3,7 +3,7 @@ function plot_orbit(x,y,z)
 %   plots in whatever units are passed in
 
 % Plot a sphere to represent Earth
-scale = 50;
+scale = .001;
 [X,Y,Z] = sphere(10);
 XX = X./scale;
 YY = Y./scale;
@@ -16,11 +16,12 @@ c = zeros(length(a));
 cla
 surf(XX,YY,ZZ) % Plot Earth
 axis equal
+xlabel('I')
+ylabel('J')
+zlabel('K')
 hold on
 grid on
-plot3(x,y,z) % plot orbit
-% surf(a,b,c,c) % plot equitorial plane
-for i=1:5
-    
+%plot3(x,y,z) % plot orbit
+%mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equitorial plane
 hold off
 end

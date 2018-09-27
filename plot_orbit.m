@@ -3,7 +3,8 @@ function plot_orbit(x,y,z)
 %   plots in whatever units are passed in
 
 % Plot a sphere to represent Earth
-scale = 50;
+r_E = 6378.1; %km
+scale = 1/r_E;
 [X,Y,Z] = sphere(10);
 XX = X./scale;
 YY = Y./scale;
@@ -22,6 +23,6 @@ zlabel('K')
 hold on
 grid on
 plot3(x,y,z) % plot orbit
-mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equitorial plane
+mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equatorial plane
 hold off
 end
