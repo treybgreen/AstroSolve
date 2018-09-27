@@ -28,10 +28,10 @@ n = cross(Khat,Hm);
 n_n = norm(n);
 
 i = acosd(dot(Khat,Hm)/Hm_n);
-omega = acosd(dot(n,e_vector)/n_n*e);
 Omega = acosd(dot(Ihat,n)/n_n);
+omega = acosd(dot(n,e_vector)/(n_n*e));
 
-nu = acosd(dot(e_vector,r)/e*r_n);
+nu = acosd(dot(e_vector,r)/(e*r_n));
 
 end
 

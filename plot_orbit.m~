@@ -16,12 +16,11 @@ c = zeros(length(a));
 cla
 surf(XX,YY,ZZ) % Plot Earth
 axis equal
-xlabel('I')
-ylabel('J')
-zlabel('K')
 hold on
-plot3(x,y,z,'LineWidth',2)
 grid on
-mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equitorial plane
+plot3(x,y,z) % plot orbit
+% surf(a,b,c,c) % plot equitorial plane
+for i=1:5
+    
 hold off
 end
