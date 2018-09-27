@@ -21,8 +21,13 @@ xlabel('I')
 ylabel('J')
 zlabel('K')
 hold on
+plot3(x,y,z,'LineWidth',2)
 grid on
+<<<<<<< HEAD
 plot3(x,y,z) % plot orbit
 mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equatorial plane
+=======
+mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equitorial plane
+>>>>>>> 586c78a647e54933a049b84f59676f5a266f3a63
 hold off
 end
