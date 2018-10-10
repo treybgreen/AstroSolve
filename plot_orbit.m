@@ -21,7 +21,7 @@ xlabel('I')
 ylabel('J')
 zlabel('K')
 hold on
-plot3(x,y,z,'LineWidth',2)
+plot3(x,y,z,'LineWidth',2,'Color','m')
 grid on
 mesh(a,b,c,'FaceAlpha',0,'EdgeColor',[0,0,0]) % plot equatorial plane
 hold off
